@@ -19,6 +19,7 @@
         .icon-nlp { background: #e0f2f1; color: #00695c; }
         .icon-hypno { background: #ede7f6; color: #512da8; }
         .icon-psycho { background: #fff3e0; color: #e65100; }
+        .icon-audio { background: #fce4ec; color: #d81b60; }
         .card-text b { display: block; font-size: 16px; color: var(--deep-ocean); }
         .card-text span { font-size: 12px; color: #607d8b; }
         .form-section { display: none; background: #fff; padding: 30px; border-radius: 30px; box-shadow: 0 15px 40px rgba(0,0,0,0.08); }
@@ -54,6 +55,10 @@
             <div class="card-icon icon-psycho"><i class="fas fa-user-shield"></i></div>
             <div class="card-text"><b>Psychotherapy</b><span>Clinical support for mental well-being</span></div>
         </div>
+        <a href="https://wa.me/923005364319?text=*RESOURCE ACCESS REQUEST*" class="card">
+            <div class="card-icon icon-audio"><i class="fas fa-headphones-alt"></i></div>
+            <div class="card-text"><b>Audio Library</b><span>Guided meditations & calming audio</span></div>
+        </a>
     </div>
 
     <div id="booking-form" class="form-section">
@@ -118,7 +123,7 @@
         } else if (serviceName === 'NLP Breakthrough') {
             box.style.display = 'block';
             label.innerText = "What is the biggest mental block you face?";
-            input.placeholder = "e.g. Anxiety, public speaking, etc.";
+            input.placeholder = "e.g. Anxiety, public speaking, habits...";
         } else if (serviceName === 'Psychotherapy') {
             box.style.display = 'block';
             label.innerText = "Is this your first time seeking therapy?";
@@ -147,7 +152,7 @@
 
         fetch(SCRIPT_URL, { method: 'POST', mode: 'no-cors', body: JSON.stringify({ service, name, phone, mode, goal, extra }) });
 
-        const msg = `*AIMS CONSULTANCY*%0A*Service:* ${service}%0A*Client:* ${name}%0A*Phone:* ${phone}%0A*Mode:* ${mode}%0A*Extra Info:* ${extra}%0A*Goal:* ${goal}`;
+        const msg = `*AIMS CONSULTANCY*%0A*Service:* ${service}%0A*Client:* ${name}%0A*Phone:* ${phone}%0A*Mode:* ${mode}%0A*Extra:* ${extra}%0A*Goal:* ${goal}`;
         window.open(`https://wa.me/${MY_WHATSAPP}?text=${msg}`, '_blank');
     }
 </script>
