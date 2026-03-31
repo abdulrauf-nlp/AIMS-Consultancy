@@ -14,7 +14,7 @@
             --forest-heal: #004d40; 
             --text-main: #37474f; 
             --soft-gray: #eceff1; 
-            --warm-white: #fafafa;
+            --white: #ffffff;
         }
         
         body { font-family: 'DM Sans', sans-serif; background-color: var(--soft-gray); margin: 0; color: var(--text-main); display: flex; flex-direction: column; min-height: 100vh; }
@@ -25,43 +25,45 @@
             box-shadow: 0 10px 30px rgba(0,0,0,0.1);
         }
         .logo-text { font-size: 32px; font-weight: 700; color: #fff; letter-spacing: -1.5px; }
-        .logo-sub { font-size: 11px; text-transform: uppercase; letter-spacing: 3px; color: rgba(255,255,255,0.7); display: block; margin-top: 5px; }
+        .logo-sub { font-size: 10px; text-transform: uppercase; letter-spacing: 2px; color: rgba(255,255,255,0.7); display: block; margin-top: 5px; }
         
         .container { max-width: 450px; margin: -30px auto 0 auto; padding: 20px; flex-grow: 1; width: 100%; box-sizing: border-box; }
 
         .card { 
-            background: var(--warm-white); border-radius: 25px; padding: 25px; margin-bottom: 20px; 
-            display: flex; align-items: center; gap: 20px; cursor: pointer; transition: 0.3s cubic-bezier(0.2, 0, 0.2, 1); 
+            background: var(--white); border-radius: 25px; padding: 25px; margin-bottom: 20px; 
+            display: flex; align-items: center; gap: 20px; cursor: pointer; transition: 0.3s; 
             border: 1px solid rgba(0,0,0,0.03); text-decoration: none; color: inherit;
             box-shadow: 0 8px 20px rgba(0,0,0,0.04);
         }
-        .card:active { transform: scale(0.96) translateY(2px); }
+        .card:active { transform: scale(0.96); }
         .card-icon { width: 55px; height: 55px; border-radius: 18px; display: flex; align-items: center; justify-content: center; font-size: 24px; }
         
         .icon-nlp { background: #e0f2f1; color: #00695c; }
         .icon-hypno { background: #ede7f6; color: #512da8; }
         .icon-coach { background: #fff3e0; color: #e65100; }
-        .icon-audio { background: #fce4ec; color: #d81b60; }
         
         .card-text b { display: block; font-size: 17px; margin-bottom: 4px; color: var(--deep-ocean); }
-        .card-text span { font-size: 13px; color: #607d8b; line-height: 1.5; font-weight: 400; }
+        .card-text span { font-size: 13px; color: #607d8b; line-height: 1.5; }
 
-        .form-section { display: none; background: rgba(255,255,255,0.9); backdrop-filter: blur(10px); padding: 30px; border-radius: 30px; box-shadow: 0 15px 40px rgba(0,0,0,0.08); animation: fadeInUp 0.4s ease; border: 1px solid #fff; }
+        .form-section { display: none; background: rgba(255,255,255,0.95); backdrop-filter: blur(10px); padding: 30px; border-radius: 30px; box-shadow: 0 15px 40px rgba(0,0,0,0.08); animation: fadeInUp 0.4s ease; }
         @keyframes fadeInUp { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
         
-        h3 { font-size: 22px; color: var(--deep-ocean); margin-bottom: 25px; text-align: center; font-weight: 700; }
-        label { display: block; font-size: 11px; font-weight: 700; color: #90a4ae; margin-bottom: 10px; text-transform: uppercase; letter-spacing: 1px; }
+        h3 { font-size: 22px; color: var(--deep-ocean); margin-bottom: 25px; text-align: center; }
+        label { display: block; font-size: 11px; font-weight: 700; color: #90a4ae; margin-bottom: 8px; text-transform: uppercase; }
         
-        input, select, textarea { width: 100%; padding: 16px; border: 1px solid #e0e0e0; border-radius: 15px; margin-bottom: 18px; font-size: 15px; box-sizing: border-box; font-family: inherit; background: #fff; color: var(--deep-ocean); }
+        input, select, textarea { width: 100%; padding: 16px; border: 1.5px solid #eee; border-radius: 15px; margin-bottom: 18px; font-size: 14px; box-sizing: border-box; font-family: inherit; background: #fff; }
         
-        .btn-main { background: var(--forest-heal); color: white; padding: 20px; width: 100%; border: none; border-radius: 18px; font-weight: 700; font-size: 16px; cursor: pointer; box-shadow: 0 6px 20px rgba(0,77,64,0.2); }
-        .btn-back { border: none; background: none; color: #90a4ae; margin-bottom: 20px; cursor: pointer; font-size: 14px; font-weight: 600; }
+        /* Logic Styling */
+        #logic-box { background: #f1f8e9; padding: 15px; border-radius: 15px; margin-bottom: 20px; border: 1px dashed var(--forest-heal); display: none; }
 
-        .footer { text-align: center; padding: 40px 0 130px 0; color: #b0bec5; font-size: 11px; letter-spacing: 1.5px; text-transform: uppercase; font-weight: 500; }
+        .btn-main { background: var(--forest-heal); color: white; padding: 20px; width: 100%; border: none; border-radius: 18px; font-weight: 700; font-size: 16px; cursor: pointer; }
+        .btn-back { border: none; background: none; color: #90a4ae; margin-bottom: 20px; cursor: pointer; font-weight: 600; }
+
+        .footer { text-align: center; padding: 40px 0 130px 0; color: #b0bec5; font-size: 10px; letter-spacing: 1px; text-transform: uppercase; }
         
-        .bottom-nav { position: fixed; bottom: 0; left: 0; right: 0; background: rgba(255,255,255,0.95); backdrop-filter: blur(5px); display: flex; justify-content: space-around; padding: 18px 0 35px 0; border-top: 1px solid #eee; z-index: 1000; border-top-left-radius: 30px; border-top-right-radius: 30px; }
-        .nav-link { text-align: center; text-decoration: none; color: #b0bec5; font-size: 11px; font-weight: 700; flex: 1; }
-        .nav-link i { font-size: 24px; display: block; margin-bottom: 6px; }
+        .bottom-nav { position: fixed; bottom: 0; left: 0; right: 0; background: #fff; display: flex; justify-content: space-around; padding: 15px 0 35px 0; border-top: 1px solid #eee; z-index: 1000; border-top-left-radius: 30px; border-top-right-radius: 30px; }
+        .nav-link { text-align: center; text-decoration: none; color: #b0bec5; font-size: 10px; font-weight: 700; flex: 1; }
+        .nav-link i { font-size: 22px; display: block; margin-bottom: 5px; }
         .nav-link.active { color: var(--forest-heal); }
     </style>
 </head>
@@ -76,35 +78,36 @@
     <div id="home-screen">
         <div class="card" onclick="showForm('booking-form', 'NLP Breakthrough')">
             <div class="card-icon icon-nlp"><i class="fas fa-brain"></i></div>
-            <div class="card-text"><b>NLP Coaching</b><span>Reprogram your subconscious mind for success</span></div>
+            <div class="card-text"><b>NLP Coaching</b><span>Reprogram your mind for success</span></div>
         </div>
 
         <div class="card" onclick="showForm('booking-form', 'Hypnotherapy')">
             <div class="card-icon icon-hypno"><i class="fas fa-eye"></i></div>
-            <div class="card-text"><b>Hypnotherapy</b><span>Access your inner healing through deep trance</span></div>
+            <div class="card-text"><b>Hypnotherapy</b><span>Deep subconscious healing sessions</span></div>
         </div>
 
         <div class="card" onclick="showForm('booking-form', 'Life Coaching')">
             <div class="card-icon icon-coach"><i class="fas fa-compass"></i></div>
-            <div class="card-text"><b>Life Coaching</b><span>Gain clarity and strategic tools to build your future</span></div>
+            <div class="card-text"><b>Life Coaching</b><span>Strategic tools for your future</span></div>
         </div>
-
-        <a href="https://wa.me/923005364319?text=*RESOURCE ACCESS REQUEST*" class="card">
-            <div class="card-icon icon-audio"><i class="fas fa-headphones-alt"></i></div>
-            <div class="card-text"><b>Audio Library</b><span>Guided meditations and calming audio</span></div>
-        </a>
     </div>
 
     <div id="booking-form" class="form-section">
-        <button class="btn-back" onclick="showHome()"><i class="fas fa-arrow-left"></i> Home</button>
-        <h3 id="service-title">Your Journey Begins</h3>
+        <button class="btn-back" onclick="showHome()"><i class="fas fa-arrow-left"></i> BACK</button>
+        <h3 id="service-title">Request Appointment</h3>
+        
         <input type="hidden" id="selected-service">
         
-        <label>Your Full Name</label>
-        <input type="text" id="client-name" placeholder="Full Name">
+        <label>Full Name</label>
+        <input type="text" id="client-name" placeholder="Enter your name">
         
         <label>WhatsApp Number</label>
         <input type="tel" id="client-phone" placeholder="03XXXXXXXXX">
+
+        <div id="logic-box">
+            <label id="logic-label">Special Question</label>
+            <input type="text" id="logic-answer" placeholder="Your answer...">
+        </div>
         
         <label>Preferred Session Mode</label>
         <select id="session-mode">
@@ -112,10 +115,10 @@
             <option value="In-Person (Clinic)">In-Person (Clinic)</option>
         </select>
 
-        <label>Briefly describe your goal</label>
-        <textarea id="client-goal" rows="4" placeholder="How can I help you?"></textarea>
+        <label>What is your primary goal?</label>
+        <textarea id="client-goal" rows="3" placeholder="Briefly describe what you want to achieve..."></textarea>
         
-        <button class="btn-main" onclick="submitBooking()">Request Appointment</button>
+        <button class="btn-main" onclick="submitBooking()">Submit Request</button>
     </div>
 
     <div class="footer">AIMS CONSULTANCY • GUJAR KHAN</div>
@@ -136,6 +139,25 @@
         document.getElementById(id).style.display = 'block';
         document.getElementById('service-title').innerText = "Book " + serviceName;
         document.getElementById('selected-service').value = serviceName;
+        
+        // CONDITIONAL LOGIC
+        const logicBox = document.getElementById('logic-box');
+        const logicLabel = document.getElementById('logic-label');
+        const logicInput = document.getElementById('logic-answer');
+
+        if(serviceName === 'Hypnotherapy') {
+            logicBox.style.display = 'block';
+            logicLabel.innerText = "Have you experienced hypnosis before?";
+            logicInput.placeholder = "Yes/No (and any specific fears)";
+        } else if (serviceName === 'NLP Breakthrough') {
+            logicBox.style.display = 'block';
+            logicLabel.innerText = "What is the biggest mental block you face?";
+            logicInput.placeholder = "e.g. Fear of failure, anxiety, etc.";
+        } else {
+            logicBox.style.display = 'none';
+            logicInput.value = "N/A"; // Hidden for basic Life Coaching
+        }
+        
         window.scrollTo(0,0);
     }
 
@@ -150,27 +172,36 @@
         const phone = document.getElementById('client-phone').value;
         const mode = document.getElementById('session-mode').value;
         const goal = document.getElementById('client-goal').value;
+        const logicDetail = document.getElementById('logic-answer').value;
 
         if(!name || !phone) {
             alert("Please provide your name and number.");
             return;
         }
 
-        // Send to Google Sheets (Hidden background process)
+        // Send to Google Sheets
         try {
             fetch(SCRIPT_URL, {
                 method: 'POST',
                 mode: 'no-cors',
-                body: JSON.stringify({ service, name, phone, mode, goal })
+                body: JSON.stringify({ 
+                    service, 
+                    name, 
+                    phone, 
+                    mode, 
+                    goal, 
+                    extra: logicDetail 
+                })
             });
-        } catch (e) { console.error("Database error", e); }
+        } catch (e) { console.error("Sync Error", e); }
 
-        // Open WhatsApp for instant notification
+        // Open WhatsApp
         const message = `*AIMS CONSULTANCY REQUEST*%0A%0A` +
-                        `*Type:* ${service}%0A` +
+                        `*Service:* ${service}%0A` +
                         `*Client:* ${name}%0A` +
                         `*Phone:* ${phone}%0A` +
-                        `*Session:* ${mode}%0A` +
+                        `*Mode:* ${mode}%0A` +
+                        `*Logic Detail:* ${logicDetail}%0A` +
                         `*Goal:* ${goal}`;
 
         window.open(`https://wa.me/${MY_WHATSAPP}?text=${message}`, '_blank');
