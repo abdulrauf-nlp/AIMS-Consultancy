@@ -1,28 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AIMS | Awais Institute of Mind Sciences</title>
+    <title>AIMS | Abdulrauf Institute of Mind Sciences</title>
     
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     
     <style>
-        /* NEW PSYCHOLOGY PALETTE */
         :root { 
-            --deep-ocean: #263238; /* Trust & Stability */
-            --forest-heal: #004d40; /* Growth & Healing */
+            --deep-ocean: #263238; 
+            --forest-heal: #004d40; 
             --text-main: #37474f; 
             --soft-gray: #eceff1; 
             --warm-white: #fafafa;
-            --accent: #FFAB00; /* Warm Amber for CTAs */
         }
         
         body { font-family: 'DM Sans', sans-serif; background-color: var(--soft-gray); margin: 0; color: var(--text-main); display: flex; flex-direction: column; min-height: 100vh; }
         
-        /* MODERN GRADIENT HEADER */
         header { 
             background: linear-gradient(135deg, var(--deep-ocean) 0%, var(--forest-heal) 100%);
             padding: 40px 20px; text-align: center; border-bottom-left-radius: 40px; border-bottom-right-radius: 40px; 
@@ -33,7 +29,6 @@
         
         .container { max-width: 450px; margin: -30px auto 0 auto; padding: 20px; flex-grow: 1; width: 100%; box-sizing: border-box; }
 
-        /* SOFTER, MORE SPACE IN CARDS */
         .card { 
             background: var(--warm-white); border-radius: 25px; padding: 25px; margin-bottom: 20px; 
             display: flex; align-items: center; gap: 20px; cursor: pointer; transition: 0.3s cubic-bezier(0.2, 0, 0.2, 1); 
@@ -41,12 +36,8 @@
             box-shadow: 0 8px 20px rgba(0,0,0,0.04);
         }
         .card:active { transform: scale(0.96) translateY(2px); }
-        .card-icon { 
-            width: 55px; height: 55px; border-radius: 18px; 
-            display: flex; align-items: center; justify-content: center; font-size: 24px;
-        }
+        .card-icon { width: 55px; height: 55px; border-radius: 18px; display: flex; align-items: center; justify-content: center; font-size: 24px; }
         
-        /* SUBTLE ICON COLORS */
         .icon-nlp { background: #e0f2f1; color: #00695c; }
         .icon-hypno { background: #ede7f6; color: #512da8; }
         .icon-coach { background: #fff3e0; color: #e65100; }
@@ -55,36 +46,28 @@
         .card-text b { display: block; font-size: 17px; margin-bottom: 4px; color: var(--deep-ocean); }
         .card-text span { font-size: 13px; color: #607d8b; line-height: 1.5; font-weight: 400; }
 
-        /* FORM STYLES - Modern "Glass" Feel */
         .form-section { display: none; background: rgba(255,255,255,0.9); backdrop-filter: blur(10px); padding: 30px; border-radius: 30px; box-shadow: 0 15px 40px rgba(0,0,0,0.08); animation: fadeInUp 0.4s ease; border: 1px solid #fff; }
         @keyframes fadeInUp { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
         
         h3 { font-size: 22px; color: var(--deep-ocean); margin-bottom: 25px; text-align: center; font-weight: 700; }
         label { display: block; font-size: 11px; font-weight: 700; color: #90a4ae; margin-bottom: 10px; text-transform: uppercase; letter-spacing: 1px; }
         
-        input, select, textarea { width: 100%; padding: 16px; border: 1px solid #e0e0e0; border-radius: 15px; margin-bottom: 18px; font-size: 15px; box-sizing: border-box; font-family: inherit; background: #fff; color: var(--deep-ocean); transition: 0.2s; }
-        input:focus, select:focus, textarea:focus { border-color: var(--forest-heal); box-shadow: 0 0 0 3px rgba(0,77,64,0.1); outline: none; }
+        input, select, textarea { width: 100%; padding: 16px; border: 1px solid #e0e0e0; border-radius: 15px; margin-bottom: 18px; font-size: 15px; box-sizing: border-box; font-family: inherit; background: #fff; color: var(--deep-ocean); }
         
-        /* WARMER, ACTION-ORIENTED BUTTON */
-        .btn-main { background: var(--forest-heal); color: white; padding: 20px; width: 100%; border: none; border-radius: 18px; font-weight: 700; font-size: 16px; cursor: pointer; box-shadow: 0 6px 20px rgba(0,77,64,0.2); transition: 0.2s; }
-        .btn-main:active { transform: translateY(1px); box-shadow: 0 3px 10px rgba(0,77,64,0.2); }
-        
+        .btn-main { background: var(--forest-heal); color: white; padding: 20px; width: 100%; border: none; border-radius: 18px; font-weight: 700; font-size: 16px; cursor: pointer; box-shadow: 0 6px 20px rgba(0,77,64,0.2); }
         .btn-back { border: none; background: none; color: #90a4ae; margin-bottom: 20px; cursor: pointer; font-size: 14px; font-weight: 600; }
 
         .footer { text-align: center; padding: 40px 0 130px 0; color: #b0bec5; font-size: 11px; letter-spacing: 1.5px; text-transform: uppercase; font-weight: 500; }
         
-        /* BOTTOM NAV - Sleeker */
-        .bottom-nav { position: fixed; bottom: 0; left: 0; right: 0; background: rgba(255,255,255,0.95); backdrop-filter: blur(5px); display: flex; justify-content: space-around; padding: 18px 0 35px 0; border-top: 1px solid #eee; z-index: 1000; border-top-left-radius: 30px; border-top-right-radius: 30px; box-shadow: 0 -10px 30px rgba(0,0,0,0.03); }
+        .bottom-nav { position: fixed; bottom: 0; left: 0; right: 0; background: rgba(255,255,255,0.95); backdrop-filter: blur(5px); display: flex; justify-content: space-around; padding: 18px 0 35px 0; border-top: 1px solid #eee; z-index: 1000; border-top-left-radius: 30px; border-top-right-radius: 30px; }
         .nav-link { text-align: center; text-decoration: none; color: #b0bec5; font-size: 11px; font-weight: 700; flex: 1; }
-        .nav-link i { font-size: 24px; display: block; margin-bottom: 6px; transition: 0.2s; }
+        .nav-link i { font-size: 24px; display: block; margin-bottom: 6px; }
         .nav-link.active { color: var(--forest-heal); }
-        .nav-link.active i { transform: translateY(-2px); }
     </style>
 </head>
 <body>
 
 <header>
-    <img src="aims-logo.png" alt="Abdulrauf Institute of Mind Sciences" style="width: 180px; height: auto; margin-bottom: 10px;">
     <div class="logo-text">AIMS</div>
     <div class="logo-sub">Abdulrauf Institute of Mind Sciences</div>
 </header>
@@ -93,7 +76,7 @@
     <div id="home-screen">
         <div class="card" onclick="showForm('booking-form', 'NLP Breakthrough')">
             <div class="card-icon icon-nlp"><i class="fas fa-brain"></i></div>
-            <div class="card-text"><b>NLP Coaching</b><span>Reprogram your subconscious mind for lasting success</span></div>
+            <div class="card-text"><b>NLP Coaching</b><span>Reprogram your subconscious mind for success</span></div>
         </div>
 
         <div class="card" onclick="showForm('booking-form', 'Hypnotherapy')">
@@ -106,9 +89,9 @@
             <div class="card-text"><b>Life Coaching</b><span>Gain clarity and strategic tools to build your future</span></div>
         </div>
 
-        <a href="https://wa.me/923005364319?text=*RESOURCE ACCESS REQUEST*%0A%0AI would like to access the AIMS Hypnotherapy & Meditation audio library." class="card">
+        <a href="https://wa.me/923005364319?text=*RESOURCE ACCESS REQUEST*" class="card">
             <div class="card-icon icon-audio"><i class="fas fa-headphones-alt"></i></div>
-            <div class="card-text"><b>Audio Library</b><span>Guided meditations, NLP anchors, and calming audio</span></div>
+            <div class="card-text"><b>Audio Library</b><span>Guided meditations and calming audio</span></div>
         </a>
     </div>
 
@@ -118,7 +101,7 @@
         <input type="hidden" id="selected-service">
         
         <label>Your Full Name</label>
-        <input type="text" id="client-name" placeholder="Muhammad Awais">
+        <input type="text" id="client-name" placeholder="Full Name">
         
         <label>WhatsApp Number</label>
         <input type="tel" id="client-phone" placeholder="03XXXXXXXXX">
@@ -129,15 +112,13 @@
             <option value="In-Person (Clinic)">In-Person (Clinic)</option>
         </select>
 
-        <label>Briefly describe your challenge or goal</label>
-        <textarea id="client-goal" rows="4" placeholder="e.g. Managing Anxiety, Career Breakthrough, Habit Change..."></textarea>
+        <label>Briefly describe your goal</label>
+        <textarea id="client-goal" rows="4" placeholder="How can I help you?"></textarea>
         
         <button class="btn-main" onclick="submitBooking()">Request Appointment</button>
     </div>
 
-    <div class="footer">
-        AIMS CONSULTANCY • GUJAR KHAN • PAKISTAN
-    </div>
+    <div class="footer">AIMS CONSULTANCY • GUJAR KHAN</div>
 </div>
 
 <div class="bottom-nav">
@@ -148,11 +129,12 @@
 
 <script>
     const MY_WHATSAPP = "923005364319";
+    const SCRIPT_URL = "https://script.google.com/macros/s/AKfycbxqgxPJXnGiVndINcc8OoeuKAtDx5VYd0iasv0LvxAeK16p2Eg_NgurUKVlbouH3zVWNQ/exec";
 
     function showForm(id, serviceName) {
         document.getElementById('home-screen').style.display = 'none';
         document.getElementById(id).style.display = 'block';
-        document.getElementById('service-title').innerText = "Book Your " + serviceName + " Session";
+        document.getElementById('service-title').innerText = "Book " + serviceName;
         document.getElementById('selected-service').value = serviceName;
         window.scrollTo(0,0);
     }
@@ -162,7 +144,7 @@
         document.getElementById('home-screen').style.display = 'block';
     }
 
-    function submitBooking() {
+    async function submitBooking() {
         const service = document.getElementById('selected-service').value;
         const name = document.getElementById('client-name').value;
         const phone = document.getElementById('client-phone').value;
@@ -170,10 +152,20 @@
         const goal = document.getElementById('client-goal').value;
 
         if(!name || !phone) {
-            alert("Please provide your name and number so I can contact you.");
+            alert("Please provide your name and number.");
             return;
         }
 
+        // Send to Google Sheets (Hidden background process)
+        try {
+            fetch(SCRIPT_URL, {
+                method: 'POST',
+                mode: 'no-cors',
+                body: JSON.stringify({ service, name, phone, mode, goal })
+            });
+        } catch (e) { console.error("Database error", e); }
+
+        // Open WhatsApp for instant notification
         const message = `*AIMS CONSULTANCY REQUEST*%0A%0A` +
                         `*Type:* ${service}%0A` +
                         `*Client:* ${name}%0A` +
