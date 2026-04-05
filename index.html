@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Abdulrauf | Mind Sciences Specialist</title>
-    <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Plus+Jakarta+Sans:wght@300;500;700&family=Montserrat:wght@700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Plus+Jakarta+Sans:wght@300;500;700&family=Montserrat:wght@700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
         :root { 
@@ -26,7 +26,7 @@
             cursor: none;
         }
 
-        /* custom cursor base */
+        /* Custom Cursor Base */
         #custom-cursor {
             width: 20px; height: 20px;
             background: var(--forest-heal);
@@ -78,16 +78,15 @@
         }
 
         .bio-img { 
-            width: 150px; height: 150px; /* Adjusted size as border is gone */
+            width: 150px; height: 150px; 
             border-radius: 50px; 
             margin: -110px auto 25px auto; 
-            /* White border and background completely removed here */
             border: none;
             background: transparent; 
             object-fit: cover; 
-            box-shadow: 0 20px 40px rgba(0,0,0,0.12); /* Kept shadow for depth */
+            box-shadow: 0 20px 40px rgba(0,0,0,0.12);
             animation: pulse-luxury 4s infinite ease-in-out;
-            display: block; /* Centers correctly in flex parent */
+            display: block;
         }
 
         @keyframes pulse-luxury {
@@ -95,11 +94,16 @@
             50% { transform: scale(1.03); box-shadow: 0 25px 50px rgba(0, 77, 64, 0.2); }
         }
 
+        /* --- UPDATED NAME FONT (Professional & Attractive) --- */
         .bio-card h3 { 
-            font-family: 'Instrument Serif', serif; 
-            margin: 10px 0 5px 0; color: var(--midnight-emerald); 
-            font-size: 38px; font-weight: 400; font-style: italic;
+            font-family: 'Playfair Display', serif; 
+            margin: 10px 0 8px 0; 
+            color: var(--midnight-emerald); 
+            font-size: 42px; 
+            font-weight: 700; 
+            letter-spacing: -0.5px;
         }
+
         .bio-card .tagline-primary { font-size: 14px; color: var(--forest-heal); font-weight: 700; text-transform: uppercase; letter-spacing: 2px; margin-bottom: 8px; display: block; }
         .bio-card .tagline-secondary { font-size: 16px; color: #546e7a; font-weight: 300; font-style: italic; }
 
@@ -133,23 +137,22 @@
             display: block; 
             font-family: 'Montserrat', sans-serif; 
             font-size: 18px; 
-            font-weight: 700; /* "Etched" look */
+            font-weight: 700; 
             color: var(--midnight-emerald); 
             letter-spacing: 0.5px;
             margin-bottom: 2px;
-            text-transform: none;
         }
 
         .card-text span { font-size: 13px; color: #78909c; font-weight: 500; }
 
-        /* Luxury Quiz Box & Forms */
+        /* Quiz Box & FAQ Styles */
         .quiz-box { 
             background: var(--midnight-emerald);
             color: var(--champagne-glow); padding: 50px 35px; border-radius: 45px; margin: 50px 0; text-align: center;
             box-shadow: 0 25px 50px rgba(4, 38, 34, 0.3);
             border: 1px solid rgba(197, 168, 124, 0.2);
         }
-        .quiz-box h4 { font-family: 'Instrument Serif', serif; font-size: 30px; margin: 0 0 10px 0; font-weight: 400; }
+        .quiz-box h4 { font-family: 'Playfair Display', serif; font-size: 30px; margin: 0 0 10px 0; font-weight: 400; }
 
         .btn-outline { 
             background: transparent; border: 1px solid #c5a87c; color: #c5a87c; 
@@ -240,7 +243,7 @@
 
     <div id="quiz-screen" class="form-section" style="display:none;">
         <button onclick="showHome()" style="border:none; background:none; color:#999; cursor:pointer; margin-bottom:20px;"><i class="fas fa-arrow-left"></i> BACK</button>
-        <h3 style="text-align:center; font-family:'Instrument Serif', serif; font-size: 32px;">Assessment</h3>
+        <h3 style="text-align:center; font-family:'Playfair Display', serif; font-size: 32px;">Assessment</h3>
         <p id="quiz-question" style="text-align:center; font-weight:500;">What is your primary goal?</p>
         <div id="quiz-options">
             <button class="btn-main" style="margin-bottom:12px; background:#f9f9f9; color:#333; border: 1px solid #eee;" onclick="quizResult('Hypnotherapy')">Overcoming a Habit/Fear</button>
@@ -251,7 +254,7 @@
 
     <div id="booking-form" class="form-section" style="display:none;">
         <button onclick="showHome()" style="border:none; background:none; color:#999; cursor:pointer; margin-bottom:20px;"><i class="fas fa-arrow-left"></i> BACK</button>
-        <h3 id="service-title" style="text-align:center; margin-top:0; font-family:'Instrument Serif', serif; font-size: 32px;">Secure Your Slot</h3>
+        <h3 id="service-title" style="text-align:center; margin-top:0; font-family:'Playfair Display', serif; font-size: 32px;">Secure Your Slot</h3>
         <p id="quiz-suggestion" style="text-align:center; color:var(--forest-heal); font-size:13px; font-weight:700;"></p>
         
         <input type="hidden" id="hidden-service">
@@ -290,13 +293,11 @@
     const MY_CALENDLY_URL = "https://calendly.com/your-link-here"; 
     const SCRIPT_URL = "https://script.google.com/macros/s/AKfycbxqgxPJXnGiVndINcc8OoeuKAtDx5VYd0iasv0LvxAeK16p2Eg_NgurUKVlbouH3zVWNQ/exec";
 
-    // Custom Cursor Script
     const cursor = document.getElementById('custom-cursor');
     document.addEventListener('mousemove', e => {
         cursor.style.transform = `translate(${e.clientX - 10}px, ${e.clientY - 10}px)`;
     });
 
-    // Parallax Effect for Bio Card
     const bioCard = document.getElementById('main-bio');
     document.addEventListener('mousemove', e => {
         let xAxis = (window.innerWidth / 2 - e.pageX) / 45;
