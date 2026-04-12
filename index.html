@@ -1,76 +1,27 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
-    <style>
-        :root {
-            --glass-bg: rgba(255, 255, 255, 0.15);
-            --glass-border: rgba(255, 255, 255, 0.2);
-            --blur-amount: 12px;
-        }
+<link href="https://fonts.googleapis.com/css2?family=Lora:wght@700&display=swap" rel="stylesheet">
 
-        body {
-            font-family: 'Inter', sans-serif;
-            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
-            color: white;
-            display: flex;
-            gap: 20px;
-            justify-content: center;
-            padding: 40px;
-        }
+<style>
+/* Only the specific heading styles have been updated */
+.service-tile h2 {
+    font-family: 'Lora', serif;
+    font-size: 1.8rem;
+    font-weight: 700;
+    margin-bottom: 15px;
+    color: #ffffff;
+}
+</style>
 
-        .service-tile {
-            background: var(--glass-bg);
-            backdrop-filter: blur(var(--blur-amount));
-            -webkit-backdrop-filter: blur(var(--blur-amount));
-            border: 1px solid var(--glass-border);
-            border-radius: 15px;
-            padding: 25px;
-            width: 300px;
-            text-align: center;
-            transition: transform 0.3s ease;
-        }
+<div class="service-tile">
+    <h2>NLP Coaching</h2>
+    <p>Unlock the power of your subconscious mind.</p>
+</div>
 
-        .service-tile:hover {
-            transform: translateY(-5px);
-            background: rgba(255, 255, 255, 0.2);
-        }
+<div class="service-tile">
+    <h2>Hypnotherapy</h2>
+    <p>Access your inner resources for lasting change.</p>
+</div>
 
-        /* Updated Eye-Catching Font for Headings */
-        .service-tile h2 {
-            font-family: 'Playfair Display', serif;
-            font-size: 1.8rem;
-            margin-bottom: 15px;
-            letter-spacing: 0.5px;
-            color: #ffffff;
-            text-shadow: 0 2px 4px rgba(0,0,0,0.3);
-        }
-
-        .service-tile p {
-            font-size: 0.95rem;
-            line-height: 1.6;
-            opacity: 0.9;
-        }
-    </style>
-</head>
-<body>
-
-    <div class="service-tile">
-        <h2>NLP Coaching</h2>
-        <p>Unlock the power of your subconscious mind through linguistic patterning and behavioral shifts.</p>
-    </div>
-
-    <div class="service-tile">
-        <h2>Hypnotherapy</h2>
-        <p>Deep relaxation techniques to access inner resources and facilitate lasting personal change.</p>
-    </div>
-
-    <div class="service-tile">
-        <h2>Psychotherapy</h2>
-        <p>Evidence-based approaches to mental wellness, providing a foundation for emotional resilience.</p>
-    </div>
-
-</body>
-</html>
+<div class="service-tile">
+    <h2>Psychotherapy</h2>
+    <p>Professional support for mental wellness.</p>
+</div>
