@@ -1,27 +1,152 @@
-<link href="https://fonts.googleapis.com/css2?family=Lora:wght@700&display=swap" rel="stylesheet">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Abdul Rauf | Psychologist & Life Coach</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Instrument+Serif:ital@0;1&family=Montserrat:wght@700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --glass-bg: rgba(255, 255, 255, 0.08);
+            --glass-border: rgba(255, 255, 255, 0.15);
+            --accent-gold: #d4af37;
+            --text-main: #f8f9fa;
+        }
 
-<style>
-/* Only the specific heading styles have been updated */
-.service-tile h2 {
-    font-family: 'Lora', serif;
-    font-size: 1.8rem;
-    font-weight: 700;
-    margin-bottom: 15px;
-    color: #ffffff;
-}
-</style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
 
-<div class="service-tile">
-    <h2>NLP Coaching</h2>
-    <p>Unlock the power of your subconscious mind.</p>
+        body {
+            font-family: 'Inter', sans-serif;
+            background: radial-gradient(circle at top right, #1e1e2f, #121212);
+            color: var(--text-main);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        .container { max-width: 1100px; margin: 0 auto; padding: 40px 20px; }
+
+        /* --- BIO CARD --- */
+        .bio-card {
+            background: var(--glass-bg);
+            backdrop-filter: blur(15px);
+            -webkit-backdrop-filter: blur(15px);
+            border: 1px solid var(--glass-border);
+            border-radius: 24px;
+            padding: 40px;
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .bio-card h1 {
+            font-family: 'Instrument Serif', serif;
+            font-size: 3.5rem;
+            margin-bottom: 10px;
+            letter-spacing: -1px;
+        }
+
+        .bio-subtitle {
+            font-size: 1.1rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: var(--accent-gold);
+            margin-bottom: 15px;
+        }
+
+        /* --- SERVICE TILES --- */
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+            margin-bottom: 60px;
+        }
+
+        .service-tile {
+            background: var(--glass-bg);
+            backdrop-filter: blur(12px);
+            border: 1px solid var(--glass-border);
+            border-radius: 20px;
+            padding: 30px;
+            transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+        }
+
+        .service-tile:hover {
+            transform: translateY(-10px);
+            background: rgba(255, 255, 255, 0.12);
+            border-color: var(--accent-gold);
+        }
+
+        /* UPDATED: Eye-catching heading font */
+        .service-tile h2 {
+            font-family: 'Instrument Serif', serif;
+            font-size: 2.2rem;
+            font-weight: 400;
+            margin-bottom: 15px;
+            color: #ffffff;
+            font-style: italic;
+        }
+
+        .service-tile p {
+            font-size: 0.95rem;
+            opacity: 0.8;
+        }
+
+        /* --- ASSESSMENT BOX --- */
+        .assessment-section {
+            background: rgba(212, 175, 55, 0.05);
+            border: 1px dashed var(--accent-gold);
+            border-radius: 20px;
+            padding: 40px;
+            text-align: center;
+        }
+
+        .btn {
+            background: var(--accent-gold);
+            color: #000;
+            padding: 15px 35px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            display: inline-block;
+            margin-top: 20px;
+            transition: 0.3s;
+        }
+
+        .btn:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 20px rgba(212, 175, 55, 0.4);
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <div class="bio-card">
+        <h1>Abdul Rauf</h1>
+        <div class="bio-subtitle">Psychologist • NLP Life Coach • Hypnotherapist</div>
+        <p>Unlocking the power of your subconscious mind.</p>
+    </div>
+
+    <div class="services-grid">
+        <div class="service-tile">
+            <h2>NLP Coaching</h2>
+            <p>Master your internal dialogue and break through cognitive barriers with advanced Neuro-Linguistic Programming.</p>
+        </div>
+        <div class="service-tile">
+            <h2>Hypnotherapy</h2>
+            <p>Direct access to the subconscious to rewrite deep-seated habits and emotional triggers in a safe, clinical environment.</p>
+        </div>
+        <div class="service-tile">
+            <h2>Psychotherapy</h2>
+            <p>Integrative clinical approaches to resolve trauma, anxiety, and complex emotional challenges for long-term healing.</p>
+        </div>
+    </div>
+
+    <div class="assessment-section">
+        <h3>Ready to begin your transformation?</h3>
+        <p>Take our quick assessment to find the best path forward.</p>
+        <a href="#" class="btn">Start Assessment</a>
+    </div>
 </div>
 
-<div class="service-tile">
-    <h2>Hypnotherapy</h2>
-    <p>Access your inner resources for lasting change.</p>
-</div>
-
-<div class="service-tile">
-    <h2>Psychotherapy</h2>
-    <p>Professional support for mental wellness.</p>
-</div>
+</body>
+</html>
